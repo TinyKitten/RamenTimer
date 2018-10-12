@@ -2,6 +2,12 @@
   <section class="container">
     <app-timer />
     <app-button />
+    <footer>
+      <p class="credit">
+        Copyright &copy; 2018
+        <a href="https://tinykitten.me" target="_blank" rel="noopener noreferrer">TinyKitten</a>
+      </p>
+    </footer>
   </section>
 </template>
 
@@ -50,5 +56,11 @@ export default {
   height: 100vh;
   color: #fff;
   flex-direction: column;
+}
+.credit {
+  margin-top: 32px;
+}
+.credit a {
+  color: #fff;
 }
 </style>
