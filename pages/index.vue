@@ -41,7 +41,7 @@ export default {
     onCompleted() {
       this.playBomb();
     },
-    async playBomb() {
+    playBomb() {
       const audio = new Audio(Bomb);
       audio.play();
     },
