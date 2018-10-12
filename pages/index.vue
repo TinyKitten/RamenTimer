@@ -7,6 +7,9 @@
         Copyright &copy; 2018
         <a href="https://tinykitten.me" target="_blank" rel="noopener noreferrer">TinyKitten</a>
       </p>
+      <p class="github">
+        <a href="https://github.com/TinyKitten/RamenTimer" target="_blank" rel="noopener noreferrer">Fork Me on GitHub</a>
+      </p>
     </footer>
   </section>
 </template>
@@ -57,10 +60,15 @@ export default {
   color: #fff;
   flex-direction: column;
 }
+a {
+  color: #fff;
+}
 .credit {
   margin-top: 32px;
+  text-align: center;
 }
-.credit a {
-  color: #fff;
+.github {
+  text-align: center;
+  margin-top: 8px;
 }
 </style>
