@@ -5,16 +5,21 @@ import { take } from 'rxjs/operators';
 const store = () =>
   new Vuex.Store({
     state: {
+      audio: null,
       counter: 0,
       started: false,
       subscription: null,
     },
     getters: {
+      audio: state => state.audio,
       counter: state => state.counter,
       started: state => state.started,
       subscription: state => state.subscription,
     },
     mutations: {
+      setAudio(state, audio) {
+        state.audio = audio;
+      },
       setStarted(state, flag) {
         state.started = flag;
       },

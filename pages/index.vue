@@ -8,7 +8,7 @@
         <a href="https://tinykitten.me" target="_blank" rel="noopener noreferrer">TinyKitten</a>
       </p>
       <p class="github">
-        <a href="https://github.com/TinyKitten/RamenTimer" target="_blank" rel="noopener noreferrer">Fork Me on GitHub</a>
+        <a href="https://github.com/TinyKitten/LTTimer" target="_blank" rel="noopener noreferrer">Fork Me on GitHub</a>
       </p>
     </footer>
   </section>
@@ -20,15 +20,13 @@ import { mapGetters } from 'vuex';
 import AppTimer from '@/components/AppTimer.vue';
 import AppButton from '@/components/AppButton.vue';
 
-import Bomb from '@/assets/bomb.mp3';
-
 export default {
   components: {
     AppTimer,
     AppButton,
   },
   computed: {
-    ...mapGetters(['started']),
+    ...mapGetters(['started', 'audio']),
   },
   watch: {
     started(flag) {
@@ -39,11 +37,7 @@ export default {
   },
   methods: {
     onCompleted() {
-      this.playBomb();
-    },
-    playBomb() {
-      const audio = new Audio(Bomb);
-      audio.play();
+      this.audio.play();
     },
   },
 };
